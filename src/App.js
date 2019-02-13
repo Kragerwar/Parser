@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
-import Students from './components/Students';
-import StudentsSimple from './components/StudentsSimple';
-
 import { Provider } from 'react-redux';
+import './App.css';
+import CoinsList from './components/CoinsList';
+import Head from './components/Header';
 import configureStore from './redux/configureStore'
+import Foot from "./components/Footer";
 const store = configureStore();
 
 
@@ -12,12 +12,11 @@ class App extends Component {
   render() {
     return (
         <Provider store={store}>
-          <div>
-            <Students/>
-            <hr/>
-            <StudentsSimple/>
+          <div className = "bg">
+              <Head/>
+              <CoinsList/>
+              <Foot/>
           </div>
-
         </Provider>
 
     );

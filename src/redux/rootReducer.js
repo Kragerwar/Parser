@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import students from './modules/students'
+import coin from './modules/coin'
 
 export default combineReducers({
-    students,
+    coin,
 });
